@@ -1,0 +1,48 @@
+// Global Styles
+.transition {
+  -webkit-transition: $speed;
+  transition: $speed;
+}
+a {
+  @extend .transition;
+  border: solid 3px $blue;
+  color: $blue;
+  display: inline-block;
+  font-weight: 700;
+  padding: 6px 12px;
+  &:hover {
+    background: $blue;
+    color: white;
+    text-decoration: none;
+  }
+}
+.rel {
+  position: relative;
+}
+.display-img {
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 350px;
+  border: inset 75px $blue;
+  overflow: hidden; 
+  margin: 0 auto 25px auto;
+  box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  @extend .transition;
+  &:hover {
+    border: inset 0px $blue;
+  }
+  img {
+      width: 100%;
+      filter: saturate(0);
+      @extend .transition;
+  }
+}
+.center-box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
