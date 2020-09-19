@@ -1,0 +1,316 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,300,100,300italic,400italic,500,500italic,700,700italic,900,900italic);
+/*font-family: 'Roboto', sans-serif;*/
+
+/*****************************************************************/
+/************************ NAVIGATION *****************************/
+/*****************************************************************/
+* { 
+    box-sizing: border-box; 
+}
+
+body { font-family: 'Roboto', sans-serif; }
+
+.navigation,
+.wrapper {
+    width: 95%;
+    max-height: 100%;
+    margin: 0 auto;
+    z-index: 100;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    text-transform: uppercase;
+    width: 600px;
+    margin-top: 15px;
+    font-size: 18px;
+    z-index: 100;
+    font-weight: 300;
+}
+
+a { text-decoration: none; }
+
+.logo a {
+    float: left;
+    padding: 0 2px;
+    margin-left: 10px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    color: #fff;
+    
+    transition: 350ms;
+}
+
+nav ul li { display: inline-block; }
+
+    nav ul li a {
+        color: #fff;
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+    nav ul li:nth-child(3) { display: none;}
+
+.navBG {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    z-index: 90;
+    background: #1976D2;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.hvr-underline-reveal:before {
+    background: #b9c4cb;
+    height: 1px;
+}
+/*****************************************************************/
+/************************ NAVIGATION *****************************/
+/*****************************************************************/
+
+
+/************************ Home *****************************/
+#Home {
+    padding-top: 50px; 
+    font-size: 0;
+    height: 100vh; /* 100vh = viewport height */
+    background: url(../images/couple.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+    #Home img {
+        display: block;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 40%;
+        height: auto;
+        -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+    }
+
+.Logo {
+    transform: scale(0);
+    animation: scalein 350ms 2s forwards;
+}
+
+    @keyframes scalein {
+        0% { transform: scale(0); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+#Home p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 300;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    animation: moveup 350ms 3s forwards;
+}
+
+    @keyframes moveup {
+        50% { opacity: 1; }
+        100% { 
+            top: 0;
+            opacity: 1;
+        }
+    }
+/************************ Home *****************************/
+
+/************************ Features *****************************/
+#Features {
+    height: 900px;
+    min-height: 100%;
+    background: url(../images/Bored.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#Features p  {
+    margin: 0 auto;
+    padding: 20px 15px;
+    width: 60%;
+    font-size: 35px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: normal;
+    position: relative;
+    top: 80px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+#Features span {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 600;
+}
+/************************ Features *****************************/
+
+/************************ Main *****************************/
+#Main {
+    height: 900px;
+    min-height: 100%;
+    background: url(../images/BGimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#Main p  {
+    margin: 0 auto;
+    padding: 20px 15px;
+    width: 520px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: normal;
+    background: rgba(0, 0, 0, 0.35);
+    position: relative;
+    top: 80px;
+}
+/************************ Main *****************************/
+
+/************************ Describe *****************************/
+#Describe { 
+    height: auto; 
+    background: #FAFAFA;
+}
+    #Describe h1 {
+        font-size: 35px;
+        font-weight: 300;
+        position: relative;
+        top: 80px;
+        margin-bottom: 150px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #212121;
+    }
+
+    #Describe h2 {
+        margin: 0 10px 10px 10px;
+        font-size: 22px;
+        font-weight: 400; 
+        color: #212121;
+    }
+
+    #Describe p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        color: #727272;
+        z-index: 0;
+    }
+
+.images {
+    margin: 0 auto;
+    width: 1000px;
+    background: #fff;
+}
+    .images a img { 
+        bottom: 0px;
+        position: relative;
+        float: left;
+        z-index: 10;
+    margin: 0px 10px 0 0;
+        -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+
+        transition: 200ms;
+    }
+    .images a img:hover {
+        bottom: 5px;
+        width: 200px;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    }
+
+.images:before,
+.images:after {
+    content: " ";
+    display: block;
+}
+    .images:after { clear: both; }
+
+.box1, .box2, .box3 {    
+    width: 950px;
+    margin: 0 auto; 
+    clear: both;
+}
+
+    .img1, .img2, .img3 {
+        background: url(../images/ipad-bg1.jpg);
+        width: 500px;
+        height: 330px;
+        float: right;
+        margin: 0 0 30px 10px;
+    }
+        .img2 {
+            background: url(../images/ipad-bg2.jpg);
+            float: left;
+            margin: 0 10px 30px 0;
+        }
+
+        .img3 {
+            background: url(../images/ipad-bg3.jpg);
+            float: right;
+        }
+
+/************************ Describe *****************************/
+
+/************************ Final *****************************/
+#Final { 
+    margin:  0px;
+    background: #fff;
+    clear: both;
+}
+
+#Final video {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+/************************ Final *****************************/
+
+/************************ Footer *****************************/
+#footer_container {
+    text-align: center;
+    color: #212121;
+    font-weight: 400;
+    padding: 50px 0;
+}
+    #footer_container h1 {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    #footer_container a { 
+        text-decoration: none; 
+        color: #212121;
+        transition: 300ms;
+    }
+    #footer_container a:hover { text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1); }
+/************************ Footer *****************************/
+
+
+
+
+
+
+
+
